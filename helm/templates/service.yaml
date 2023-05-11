@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  clusterIP: 10.96.0.5
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: rpc
+      protocol: TCP
+      name: rpc
+  selector:
+    statefulset.kubernetes.io/pod-name: {{ .Release.Name }}-master-0

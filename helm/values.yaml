@@ -1,0 +1,11 @@
+replicaCount: 10
+fullname: notifi
+
+image:
+  repository: racin/notifi
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 8080

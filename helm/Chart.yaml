@@ -1,0 +1,7 @@
+apiVersion: v1
+name: notifi
+version: 1.0.0
+
+maintainers:
+  - name: Racin Nygaard
+    email: racin.nygaard@gmail.com
